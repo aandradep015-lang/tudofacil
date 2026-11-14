@@ -66,12 +66,43 @@ footer{background:#101828;color:#d0d5dd;padding:30px 22px}.foot{max-width:1100px
   <section class="section" id="artigos">
     <div class="section-head"><div><h2>Guias e dicas</h2><p class="sub">Conteúdo simples para aprender algo novo.</p></div></div>
     <div class="grid">
-      <article class="card article-card"><div class="ico">💡</div><h3>Como calcular porcentagem sem complicação</h3><p>Entenda o cálculo com um exemplo fácil.</p><a href="#" class="read">Ler artigo ↓</a><div class="article-body"><p>Porcentagem significa uma parte de 100. Para descobrir 15% de 200, transforme 15% em 0,15 e multiplique: 0,15 × 200 = 30. A calculadora gratuita desta página faz essa conta para você.</p></div></article>
+      <article class="card article-card"><div class="ico">💡</div><h3>Como calcular porcentagem sem complicação</h3><p>Entenda o cálculo com um exemplo fácil.</p><a href="#artigo-porcentagem" class="read" data-page="artigo-porcentagem">Ler artigo completo →</a></article>
       <article class="card article-card"><div class="ico">🛍️</div><h3>Como descobrir o preço com desconto</h3><p>Aprenda a comparar ofertas de maneira consciente.</p><a href="#" class="read">Ler artigo ↓</a><div class="article-body"><p>Para calcular o preço com desconto, multiplique o preço original pela porcentagem de desconto e subtraia o resultado do preço inicial. Exemplo: 20% de R$ 100 é R$ 20; o preço final será R$ 80. Compare também frete, condições e necessidade real da compra.</p></div></article>
       <article class="card article-card"><div class="ico">🔒</div><h3>Hábitos simples para proteger suas contas</h3><p>Conheça práticas básicas de segurança digital.</p><a href="#" class="read">Ler artigo ↓</a><div class="article-body"><p>Use senhas diferentes em serviços importantes, ative a autenticação em duas etapas e desconfie de links inesperados. Um gerador pode ajudar a criar uma senha aleatória, mas guarde-a em um gerenciador confiável e nunca compartilhe códigos de acesso.</p></div></article>
     </div>
   </section>
   <section class="section card"><h2>Sobre o TudoFácil</h2><p class="sub">Nosso objetivo é reunir ferramentas gratuitas e explicações úteis em um só lugar. As ferramentas desta versão funcionam no próprio navegador.</p><a href="#sobre" data-page="sobre">Saiba mais sobre o projeto →</a></section>
+</section>
+
+
+<section class="page prose" id="artigo-porcentagem">
+  <p><a href="#inicio" data-page="inicio">← Voltar ao início</a></p>
+  <div class="tag">Matemática • Guia para iniciantes</div>
+  <h1 class="page-title">Como calcular porcentagem: aprenda de um jeito fácil e rápido</h1>
+  <p>Você já ficou em dúvida na hora de calcular 10%, 20% ou 50% de um valor? A porcentagem aparece em diversas situações do nosso dia a dia, como descontos em lojas, notas escolares, pesquisas e organização financeira.</p>
+  <p>A boa notícia é que calcular porcentagem é mais simples do que parece. Neste guia, você vai aprender o método, conferir exemplos práticos e descobrir como fazer os cálculos facilmente.</p>
+  <h2>1. O que é porcentagem?</h2>
+  <p>Porcentagem é uma maneira de representar uma parte de um total. O símbolo utilizado é % e significa “por cento”.</p>
+  <ul><li>10% representa 10 partes de cada 100.</li><li>25% representa 25 partes de cada 100.</li><li>50% representa metade.</li><li>100% representa o total.</li></ul>
+  <p>Por exemplo, se uma turma tem 100 estudantes e 30% são meninas, isso significa que 30 estudantes são meninas.</p>
+  <h2>2. Como calcular porcentagem?</h2>
+  <p>Existe uma fórmula simples:</p>
+  <div class="card"><strong>Valor × Porcentagem ÷ 100</strong></div>
+  <p>Exemplo: quanto é 20% de R$ 150?</p>
+  <ol><li>Multiplique 150 por 20: o resultado é 3.000.</li><li>Divida 3.000 por 100.</li></ol>
+  <p><strong>Resultado: R$ 30.</strong> Portanto, 20% de R$ 150 corresponde a R$ 30.</p>
+  <h2>3. Exemplos práticos</h2>
+  <ul><li><strong>10% de 200:</strong> 200 × 10 ÷ 100 = 20.</li><li><strong>25% de 80:</strong> 80 × 25 ÷ 100 = 20.</li><li><strong>50% de 300:</strong> 300 × 50 ÷ 100 = 150.</li></ul>
+  <p>Com a mesma fórmula, conseguimos calcular diferentes porcentagens.</p>
+  <h2>4. Como calcular descontos?</h2>
+  <p>Imagine um produto que custa R$ 200 e está com 30% de desconto. Primeiro, calcule o desconto: 200 × 30 ÷ 100 = R$ 60. Depois, subtraia esse valor do preço original: R$ 200 − R$ 60 = <strong>R$ 140</strong>.</p>
+  <h2>5. Calcule usando a ferramenta gratuita</h2>
+  <p>Se preferir, você pode usar a calculadora de porcentagem do TudoFácil. Informe a porcentagem e o valor desejado para obter o resultado.</p>
+  <div class="card"><h3>Experimente agora</h3><p>Abra a calculadora de porcentagem e faça seu próprio cálculo.</p><button class="btn" type="button" data-open-tool="porcentagem">Abrir calculadora de porcentagem</button></div>
+  <h2>6. Conclusão</h2>
+  <p>Aprender a calcular porcentagem pode facilitar diversas atividades do cotidiano. Com uma fórmula simples e alguns exemplos, você consegue resolver cálculos relacionados a descontos, estudos e outras situações.</p>
+  <p><strong>TudoFácil — ferramentas gratuitas para facilitar seu dia a dia.</strong></p>
+  <p class="small">Conteúdo educativo. Confira os cálculos quando forem usados em decisões importantes.</p>
 </section>
 
 <section class="page prose" id="sobre">
@@ -118,7 +149,7 @@ footer{background:#101828;color:#d0d5dd;padding:30px 22px}.foot{max-width:1100px
  }
  function route() {
    const page = location.hash.replace('#','');
-   if(['sobre','privacidade','contato'].includes(page)) showPage(page);
+   if(['sobre','privacidade','contato','artigo-porcentagem'].includes(page)) showPage(page);
    else showPage('inicio');
  }
  window.addEventListener('hashchange', route);
@@ -133,6 +164,7 @@ footer{background:#101828;color:#d0d5dd;padding:30px 22px}.foot{max-width:1100px
    const panel = $('panel-'+name); if(panel){panel.classList.add('active');panel.scrollIntoView({behavior:'smooth',block:'center'});}
  }
  document.querySelectorAll('.tool-card').forEach(card=>card.addEventListener('click',()=>openTool(card.dataset.tool)));
+ document.querySelectorAll('[data-open-tool]').forEach(btn=>btn.addEventListener('click',()=>{location.hash='inicio';showPage('inicio');openTool(btn.dataset.openTool);}));
  $('searchBtn').addEventListener('click', searchTools);
  $('searchInput').addEventListener('keydown',e=>{if(e.key==='Enter')searchTools();});
  function searchTools(){

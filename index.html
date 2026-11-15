@@ -20,9 +20,57 @@ main{max-width:1100px;margin:auto;padding:30px 22px 64px}.hero{background:linear
 footer{background:#101828;color:#d0d5dd;padding:30px 22px}.foot{max-width:1100px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot a{color:#dbeafe;margin-right:14px}.small{font-size:.82rem;color:#98a2b3}
 @media(max-width:760px){.nav{padding:12px 16px}.menu-btn{display:block}.navlinks{display:none;position:absolute;left:0;right:0;top:60px;background:white;padding:16px 22px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}main{padding:20px 16px 48px}.hero{grid-template-columns:1fr;padding:32px 22px}.hero-art{display:none}.grid{grid-template-columns:repeat(2,1fr)}.form-grid{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}}
 @media(max-width:480px){.grid{grid-template-columns:1fr}.search{flex-direction:column}.search .btn{width:100%}}
+
+/* Tema noturno moderno — identidade visual do TudoFácil */
+:root{--blue:#38bdf8;--blue2:#0ea5e9;--ink:#edf4ff;--muted:#a8b8ce;--line:#293b56;--bg:#0a1220;--card:#111e30;--green:#4ade80}
+body{background:radial-gradient(ellipse at 15% 0%,#132c4d 0,transparent 36%),var(--bg);color:var(--ink)}
+a{color:#7dd3fc}
+.topbar{background:#0b1525ed;border-bottom:1px solid #263a55;backdrop-filter:blur(14px)}
+.brand{color:#f8fbff}.brand b{color:#38bdf8}.navlinks a{color:#c8d7e9}.navlinks a:hover,.navlinks a.current{color:#7dd3fc}.menu-btn{background:#172b43;color:#7dd3fc}
+main{max-width:1160px;padding-top:34px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#102b4a 0%,#164b76 55%,#312e81 100%);border:1px solid #3b6389;box-shadow:0 22px 60px #02081788;padding:54px 48px}
+.hero:after{content:"";position:absolute;width:300px;height:300px;border:1px solid #ffffff18;border-radius:50%;right:4%;top:-42%;box-shadow:0 0 0 28px #ffffff08,0 0 0 58px #ffffff06;pointer-events:none}
+.eyebrow{color:#a5e5ff}.hero h1{max-width:720px;color:#fff}.hero p{color:#d7e9fa}.hero-art{background:linear-gradient(145deg,#ffffff22,#ffffff08);border:1px solid #ffffff3d;box-shadow:0 18px 40px #02081755}
+.search input{background:#f8fbff;border:1px solid #b9d8f2;color:#14243a}.search input:focus,.field input:focus,.field textarea:focus,.field select:focus{outline:2px solid #38bdf8;outline-offset:2px}
+.btn{background:linear-gradient(135deg,#0ea5e9,#2563eb);box-shadow:0 7px 18px #0284c733}.btn:hover{background:linear-gradient(135deg,#38bdf8,#3b82f6)}.hero .btn{background:#e0f2fe;color:#075985}
+.section{margin-top:48px}.section h2{color:#f1f7ff;font-size:1.7rem}.sub{color:#a8b8ce}.section-head{margin-bottom:20px}
+.grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:linear-gradient(155deg,#15243a,#101b2c);border:1px solid #2a405e;box-shadow:0 10px 26px #02081735}.tool-card{position:relative;min-height:190px;padding:23px;overflow:hidden}.tool-card:after{content:"";position:absolute;width:90px;height:90px;right:-38px;bottom:-42px;border-radius:50%;background:#38bdf80d;transition:.2s}.tool-card:hover{transform:translateY(-5px);border-color:#38bdf8;box-shadow:0 18px 32px #02081770}.tool-card h3,.article-card h3{color:#f3f8ff;font-size:1.08rem}.card p{color:#afc0d4}.ico{width:48px;height:48px;border:1px solid #345678;background:linear-gradient(145deg,#1e4264,#1b3150);border-radius:14px;color:#7dd3fc}.tag{color:#a5e5ff;background:#123b59;border:1px solid #245879}
+.article-card{min-height:205px}.article-card .read{color:#7dd3fc}.article-body{color:#c7d6e8;border-color:#2a405e}
+.tool-panel .card{max-width:820px;background:#132239;border-color:#355171;padding:25px}.tool-panel h3{color:#f5f9ff}.field label{color:#dce9f7}.field input,.field textarea,.field select{background:#f7faff;color:#14243a;border:1px solid #b7c8dc}.result{background:#102f50;color:#d7efff;border:1px solid #24527a}.result.success{background:#123c32;color:#bbf7d0;border-color:#246b50}.result.error{background:#451f2b;color:#fecdd3;border-color:#87394e}
+.page-title,.prose h1,.prose h2,.prose h3{color:#f3f8ff}.prose p,.prose li{color:#c0cede}.prose a{color:#7dd3fc}.notice{background:#3b3218;border-color:#77612b;color:#fde68a}.toc{background:#132239;border-color:#2d4665}.toc h2{color:#eaf4ff}.article-cta{background:#122d49;border-color:#2b5b82}.article-cta p{color:#c8d9eb}.faq details{background:#132239;border-color:#2d4665}.faq summary{color:#e8f3ff}.faq details p{color:#bdcde0}.small{color:#9aadc4}
+.hero-trust{font-size:.82rem!important;color:#b8dcf4!important;margin:13px 0 0!important;letter-spacing:.1px}.tool-card:focus-visible,.btn:focus-visible,a:focus-visible{outline:3px solid #7dd3fc;outline-offset:3px}footer{background:#070e19;border-top:1px solid #263a55;color:#b8c8dc}.foot a{color:#7dd3fc}
+@media(max-width:760px){.navlinks{background:#0d192a;border-color:#263a55}.hero{padding:36px 24px}.hero-art{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tool-card{min-height:180px}}
+@media(max-width:520px){main{padding:18px 14px 42px}.hero{border-radius:20px;padding:30px 20px}.hero h1{font-size:2.25rem}.grid{grid-template-columns:1fr}.tool-card{min-height:unset}.section{margin-top:38px}.tool-panel .card{padding:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Abertura curta da marca — discreta e respeita preferência por movimento reduzido */
+.splash-screen{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at 50% 42%,#173b60 0,#0b1728 48%,#070e19 100%);opacity:1;visibility:visible;transition:opacity .42s ease,visibility .42s ease}
+.splash-screen.is-leaving{opacity:0;visibility:hidden;pointer-events:none}
+.splash-content{display:flex;flex-direction:column;align-items:center;text-align:center;gap:13px;animation:splash-arrive .75s cubic-bezier(.2,.8,.2,1) both}
+.splash-mark{width:76px;height:76px;display:grid;place-items:center;border-radius:23px;background:linear-gradient(145deg,#38bdf8,#2563eb);box-shadow:0 0 0 8px #38bdf81c,0 15px 42px #0284c755;color:#fff;font-size:2.5rem;font-weight:900;animation:splash-glow 1.5s ease-in-out infinite alternate}
+.splash-name{margin:0;color:#f8fbff;font-size:clamp(2.25rem,8vw,3.2rem);font-weight:900;letter-spacing:-1.8px;line-height:1}
+.splash-name span{color:#38bdf8}
+.splash-caption{margin:0;color:#b9cce2;font-size:.9rem;letter-spacing:.06em}
+.splash-progress{width:150px;height:3px;margin-top:8px;overflow:hidden;border-radius:99px;background:#ffffff20}
+.splash-progress:after{content:"";display:block;width:42%;height:100%;border-radius:inherit;background:#38bdf8;animation:splash-progress 1.45s ease-in-out both}
+.splash-skip{position:absolute;right:18px;bottom:18px;border:1px solid #ffffff35;border-radius:999px;padding:8px 13px;background:#ffffff0d;color:#dcecff;font-size:.82rem;cursor:pointer}
+@keyframes splash-arrive{from{opacity:0;transform:translateY(12px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes splash-glow{from{box-shadow:0 0 0 7px #38bdf814,0 12px 30px #0284c744}to{box-shadow:0 0 0 12px #38bdf80a,0 16px 42px #0284c766}}
+@keyframes splash-progress{from{transform:translateX(-110%)}to{transform:translateX(260%)}}
+@media(prefers-reduced-motion:reduce){.splash-screen{transition:none}.splash-content,.splash-mark,.splash-progress:after{animation:none!important}.splash-screen{display:none!important}}
+
 </style>
 </head>
 <body>
+<div class="splash-screen" id="splashScreen" role="status" aria-live="polite" aria-label="Carregando TudoFácil">
+  <div class="splash-content">
+    <div class="splash-mark" aria-hidden="true">T</div>
+    <h1 class="splash-name">Tudo<span>Fácil</span></h1>
+    <p class="splash-caption">PRATICIDADE PARA O SEU DIA A DIA</p>
+    <div class="splash-progress" aria-hidden="true"></div>
+  </div>
+  <button class="splash-skip" id="skipSplash" type="button">Pular abertura</button>
+</div>
 <header class="topbar">
   <nav class="nav" aria-label="Navegação principal">
     <a class="brand" href="#inicio" data-page="inicio">Tudo<b>Fácil</b></a>
@@ -40,16 +88,16 @@ footer{background:#101828;color:#d0d5dd;padding:30px 22px}.foot{max-width:1100px
 <section class="page active" id="inicio">
   <div class="hero">
     <div>
-      <div class="eyebrow">Simples • grátis • útil</div>
-      <h1>Pequenas soluções para facilitar seu dia.</h1>
-      <p>Use ferramentas online gratuitas e encontre explicações práticas para tarefas do dia a dia. Sem cadastro para usar estas ferramentas.</p>
-      <div class="search"><input id="searchInput" type="search" placeholder="O que você precisa calcular ou fazer?" aria-label="Buscar ferramenta"><button class="btn" id="searchBtn">Buscar</button></div>
+      <div class="eyebrow">PRATICIDADE PARA O SEU DIA A DIA</div>
+      <h1>Resolva mais coisas. Com menos complicação.</h1>
+      <p>Calculadoras, ferramentas para estudos e recursos úteis em um só lugar. Escolha o que precisa e comece em poucos segundos.</p>
+      <div class="search"><input id="searchInput" type="search" placeholder="Ex.: desconto, média, palavras..." aria-label="Buscar ferramenta"><button class="btn" id="searchBtn">Encontrar ferramenta</button></div><p class="hero-trust">✦ Grátis para usar &nbsp; • &nbsp; Sem cadastro &nbsp; • &nbsp; Ferramentas direto no navegador</p>
     </div>
     <div class="hero-art" aria-hidden="true">🧰</div>
   </div>
 
   <section class="section" id="ferramentas">
-    <div class="section-head"><div><h2>Ferramentas gratuitas</h2><p class="sub">Escolha uma ferramenta para começar.</p></div></div>
+    <div class="section-head"><div><h2>Explore as ferramentas</h2><p class="sub">Acesse rapidamente o recurso que vai resolver sua tarefa.</p></div></div>
     <div class="grid" id="toolGrid">
       <article class="card tool-card" data-tool="porcentagem"><div class="ico">％</div><h3>Calculadora de porcentagem</h3><p>Descubra uma porcentagem de qualquer valor.</p><span class="tag">Matemática</span></article>
       <article class="card tool-card" data-tool="desconto"><div class="ico">🏷️</div><h3>Calculadora de desconto</h3><p>Veja o preço final depois de um desconto.</p><span class="tag">Compras</span></article>
@@ -65,7 +113,7 @@ footer{background:#101828;color:#d0d5dd;padding:30px 22px}.foot{max-width:1100px
   </section>
 
   <section class="section" id="artigos">
-    <div class="section-head"><div><h2>Guias e dicas</h2><p class="sub">Conteúdo simples para aprender algo novo.</p></div></div>
+    <div class="section-head"><div><h2>Aprenda com nossos guias</h2><p class="sub">Explicações práticas para entender os cálculos e aproveitar melhor cada ferramenta.</p></div></div>
     <div class="grid">
       <article class="card article-card"><div class="ico">💡</div><h3>Como calcular porcentagem sem complicação</h3><p>Entenda o cálculo com um exemplo fácil.</p><a href="#artigo-porcentagem" class="read" data-page="artigo-porcentagem">Ler artigo completo →</a></article>
       <article class="card article-card"><div class="ico">🛍️</div><h3>Como calcular descontos: descubra o preço final</h3><p>Aprenda a calcular o valor economizado e quanto você realmente pagará.</p><a href="#artigo-descontos" class="read" data-page="artigo-descontos">Ler artigo completo →</a></article>
@@ -241,7 +289,7 @@ footer{background:#101828;color:#d0d5dd;padding:30px 22px}.foot{max-width:1100px
   <p>Para calcular a média ponderada, multiplique cada nota pelo seu peso, some os resultados e divida pela soma dos pesos.</p>
   <div class="card"><p><strong>Média ponderada = soma de (nota × peso) ÷ soma dos pesos</strong></p></div>
   <p>Exemplo: uma nota 7 com peso 2 e uma nota 9 com peso 1 resultam em (7 × 2 + 9 × 1) ÷ (2 + 1) = 23 ÷ 3 = aproximadamente 7,67.</p>
-  <p><strong>Atenção:</strong> a calculadora desta página faz a média simples. Confira com seu professor ou no regulamento da escola se há pesos, recuperação, arredondamento ou outras regras.</p>
+  <p><strong>Atenção:</strong> a calculadora permite média simples, média ponderada e simulações de recuperação. Confira com seu professor ou no regulamento da escola qual fórmula deve ser usada, inclusive regras de arredondamento.</p>
 
   <h2 id="calculadora-media">5. Passo a passo: use a calculadora de média do TudoFácil</h2>
   <p>A ferramenta permite calcular média simples, média ponderada e simular algumas regras comuns de recuperação. Antes de começar, confira no boletim, com o professor ou no regulamento qual fórmula sua escola utiliza.</p>
@@ -317,6 +365,16 @@ footer{background:#101828;color:#d0d5dd;padding:30px 22px}.foot{max-width:1100px
  const $ = id => document.getElementById(id);
  const fmt = n => new Intl.NumberFormat('pt-BR',{maximumFractionDigits:2}).format(n);
  $('year').textContent = new Date().getFullYear();
+
+ // Exibe a marca por um instante e libera a interface automaticamente.
+ const splash = $('splashScreen');
+ const closeSplash = () => {
+   if (!splash || splash.classList.contains('is-leaving')) return;
+   splash.classList.add('is-leaving');
+   window.setTimeout(() => splash.remove(), 460);
+ };
+ $('skipSplash').addEventListener('click', closeSplash);
+ window.setTimeout(closeSplash, 1750);
 
  function showPage(page) {
    document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.id === page));

@@ -256,10 +256,22 @@ footer{background:#101828;color:#d0d5dd;padding:30px 22px}.foot{max-width:1100px
  });
  function openTool(name) {
    document.querySelectorAll('.tool-panel').forEach(p=>p.classList.remove('active'));
-   const panel = $('panel-'+name); if(panel){panel.classList.add('active');panel.scrollIntoView({behavior:'smooth',block:'center'});}
+   const panel = $('panel-'+name);
+   if(panel){
+     panel.classList.add('active');
+     // Aguarda a página inicial ficar visível antes de rolar até a ferramenta.
+     requestAnimationFrame(()=>panel.scrollIntoView({behavior:'smooth',block:'center'}));
+   }
  }
  document.querySelectorAll('.tool-card').forEach(card=>card.addEventListener('click',()=>openTool(card.dataset.tool)));
- document.querySelectorAll('[data-open-tool]').forEach(btn=>btn.addEventListener('click',()=>{location.hash='inicio';showPage('inicio');openTool(btn.dataset.openTool);}));
+ document.querySelectorAll('[data-open-tool]').forEach(btn=>btn.addEventListener('click',e=>{
+   e.preventDefault();
+   const tool=btn.dataset.openTool;
+   // Atualiza o endereço sem provocar o salto automático para o topo/pesquisa.
+   history.replaceState(null,'','#inicio');
+   showPage('inicio');
+   openTool(tool);
+ }));
  $('searchBtn').addEventListener('click', searchTools);
  $('searchInput').addEventListener('keydown',e=>{if(e.key==='Enter')searchTools();});
  function searchTools(){

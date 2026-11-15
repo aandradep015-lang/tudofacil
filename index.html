@@ -108,7 +108,7 @@ main{max-width:1160px;padding-top:34px}
     <div class="tool-panel" id="panel-porcentagem"><div class="card"><h3>Calculadora de porcentagem</h3><p class="sub">Quanto é X% de um valor?</p><div class="form-grid"><div class="field"><label for="pct">Porcentagem (%)</label><input id="pct" type="number" step="any" placeholder="Ex.: 15"></div><div class="field"><label for="base">Valor</label><input id="base" type="number" step="any" placeholder="Ex.: 200"></div></div><button class="btn" id="calcPct">Calcular</button><div class="result" id="pctResult" aria-live="polite">O resultado aparecerá aqui.</div></div></div>
     <div class="tool-panel" id="panel-desconto"><div class="card"><h3>Calculadora de desconto</h3><p class="sub">Informe o preço original e a porcentagem. O resultado mostra a economia e o preço final.</p><div class="form-grid"><div class="field"><label for="price">Preço original (R$)</label><input id="price" type="number" min="0" step="0.01" placeholder="Ex.: 150"></div><div class="field"><label for="discount">Desconto inicial (%)</label><input id="discount" type="number" min="0" max="100" step="any" placeholder="Ex.: 20"></div></div><div class="field" style="margin-top:12px"><label for="extraDiscount">Desconto adicional sobre o preço já reduzido (opcional, %)</label><input id="extraDiscount" type="number" min="0" max="100" step="any" placeholder="Ex.: 10"></div><button class="btn" id="calcDiscount">Calcular desconto</button><div class="result" id="discountResult" aria-live="polite">O resultado aparecerá aqui.</div><h3 style="margin-top:24px">Compare duas ofertas</h3><p class="sub">Informe o preço e o desconto da segunda oferta para comparar os preços finais.</p><div class="form-grid"><div class="field"><label for="price2">Preço da oferta 2 (R$)</label><input id="price2" type="number" min="0" step="0.01" placeholder="Ex.: 180"></div><div class="field"><label for="discount2">Desconto da oferta 2 (%)</label><input id="discount2" type="number" min="0" max="100" step="any" placeholder="Ex.: 25"></div></div><button class="btn" id="compareDiscount" style="margin-top:12px">Comparar ofertas</button><div class="result" id="compareResult" aria-live="polite">A comparação aparecerá aqui.</div><p class="small">A comparação considera apenas o preço após o desconto informado. Confira frete, taxas, qualidade, prazo e condições de cada vendedor.</p></div></div>
     <div class="tool-panel" id="panel-media"><div class="card"><h3>Calculadora de média escolar</h3><p class="sub">Informe notas de 0 a 10 separadas por ponto e vírgula. Use a mesma ordem para os pesos. Ex.: notas 7; 8; 9 e pesos 1; 2; 1. Se todas tiverem o mesmo peso, informe 1; 1; 1.</p><div class="field"><label for="grades">Notas das avaliações</label><input id="grades" type="text" placeholder="Ex.: 7; 8; 9"></div><div class="field" style="margin-top:12px"><label for="gradeWeights">Pesos correspondentes</label><input id="gradeWeights" type="text" placeholder="Ex.: 1; 2; 1 (opcional)"></div><div class="field" style="margin-top:12px"><label for="recoveryRule">Regra da recuperação</label><select id="recoveryRule"><option value="none">Não calcular recuperação</option><option value="average">Média entre a média atual e a recuperação</option><option value="replace">Substituir a menor nota pela recuperação</option><option value="higher">Comparar e manter a maior média (original ou substituindo a menor nota)</option></select></div><div class="field" id="recoveryField" style="margin-top:12px;display:none"><label for="recoveryGrade">Nota da recuperação (0 a 10)</label><input id="recoveryGrade" type="number" min="0" max="10" step="any" placeholder="Ex.: 8"></div><div class="field" style="margin-top:12px"><label for="passingGrade">Média desejada (opcional)</label><input id="passingGrade" type="number" min="0" max="10" step="any" placeholder="Ex.: 7"></div><div class="field" style="margin-top:12px"><label for="remainingAssessments">Quantas avaliações ainda faltam? (opcional)</label><input id="remainingAssessments" type="number" min="1" max="30" step="1" placeholder="Ex.: 2"></div><button class="btn" id="calcMean" style="margin-top:14px">Calcular média</button><div class="result" id="meanResult" aria-live="polite">O resultado e as etapas do cálculo aparecerão aqui.</div><p class="small">Importante: as regras de recuperação variam. Selecione somente a opção que corresponde ao regulamento da sua escola. A ferramenta considera notas de 0 a 10 e não aplica arredondamentos especiais da instituição. O cálculo da média necessária considera peso 1 para cada avaliação futura.</p></div></div>
-    <div class="tool-panel" id="panel-texto"><div class="card"><h3>Contador de texto</h3><p class="sub">Digite ou cole um texto para contar palavras e caracteres.</p><div class="field"><label for="textToCount">Seu texto</label><textarea id="textToCount" placeholder="Comece a escrever..."></textarea></div><div class="result" id="textResult" aria-live="polite">0 palavras • 0 caracteres</div></div></div>
+    <div class="tool-panel" id="panel-texto"><div class="card"><h3>Contador de texto</h3><p class="sub">Digite ou cole um texto para contar palavras e caracteres com e sem espaços.</p><div class="field"><label for="textToCount">Seu texto</label><textarea id="textToCount" placeholder="Comece a escrever..."></textarea></div><div class="result" id="textResult" aria-live="polite">0 palavras • 0 caracteres com espaços • 0 sem espaços</div></div></div>
     <div class="tool-panel" id="panel-senha"><div class="card"><h3>Gerador de senhas</h3><p class="sub">A senha é criada localmente no seu navegador e não é enviada ao site.</p><div class="form-grid"><div class="field"><label for="length">Tamanho (8 a 32)</label><input id="length" type="number" min="8" max="32" value="16"></div><div class="field"><label for="symbols">Símbolos</label><select id="symbols"><option value="yes">Incluir símbolos</option><option value="no">Sem símbolos</option></select></div></div><button class="btn" id="makePassword">Gerar senha</button> <button class="btn" id="copyPassword" style="background:#344054">Copiar</button><div class="result" id="passwordResult" aria-live="polite">Sua senha aparecerá aqui.</div></div></div>
   </section>
 
@@ -118,6 +118,8 @@ main{max-width:1160px;padding-top:34px}
       <article class="card article-card"><div class="ico">💡</div><h3>Como calcular porcentagem sem complicação</h3><p>Entenda o cálculo com um exemplo fácil.</p><a href="#artigo-porcentagem" class="read" data-page="artigo-porcentagem">Ler artigo completo →</a></article>
       <article class="card article-card"><div class="ico">🛍️</div><h3>Como calcular descontos: descubra o preço final</h3><p>Aprenda a calcular o valor economizado e quanto você realmente pagará.</p><a href="#artigo-descontos" class="read" data-page="artigo-descontos">Ler artigo completo →</a></article>
       <article class="card article-card"><div class="ico">📚</div><h3>Como calcular a média escolar: descubra sua nota</h3><p>Aprenda a calcular a média simples, veja exemplos e entenda quando existem pesos diferentes.</p><a href="#artigo-media" class="read" data-page="artigo-media">Ler artigo completo →</a></article>
+      <article class="card article-card"><div class="ico">📝</div><h3>Como contar palavras e caracteres de um texto</h3><p>Entenda a contagem de palavras, espaços e caracteres e use o contador gratuito.</p><a href="#artigo-texto" class="read" data-page="artigo-texto">Ler artigo completo →</a></article>
+
     </div>
   </section>
   <section class="section card"><h2>Sobre o TudoFácil</h2><p class="sub">Nosso objetivo é reunir ferramentas gratuitas e explicações úteis em um só lugar. As ferramentas desta versão funcionam no próprio navegador.</p><a href="#sobre" data-page="sobre">Saiba mais sobre o projeto →</a></section>
@@ -357,6 +359,79 @@ main{max-width:1160px;padding-top:34px}
     <p class="small">Este é um espaço de exemplo. Substitua o texto entre colchetes por um contato real que você controla.</p>
   </div>
 </section>
+
+<section class="page prose" id="artigo-texto">
+  <p><a href="#inicio" data-page="inicio">← Voltar ao início</a></p>
+  <div class="tag">Estudos • Escrita • Ferramentas digitais</div>
+  <h1 class="page-title">Como contar palavras e caracteres de um texto</h1>
+  <p>Você precisa entregar uma redação com um número mínimo de palavras ou publicar uma mensagem com limite de caracteres? Saber a diferença entre essas contagens ajuda a revisar textos e evitar ultrapassar o limite solicitado.</p>
+  <p>Neste guia, você vai entender o que cada medida significa, conferir exemplos simples e experimentar o contador de texto gratuito do TudoFácil.</p>
+
+  <nav class="toc" aria-label="Índice do artigo">
+    <h2>Neste artigo</h2>
+    <ol>
+      <li><a href="#texto-palavras">O que é a contagem de palavras?</a></li>
+      <li><a href="#texto-caracteres">O que são caracteres?</a></li>
+      <li><a href="#texto-exemplo">Exemplo prático</a></li>
+      <li><a href="#texto-espacos">Contar com ou sem espaços?</a></li>
+      <li><a href="#texto-usos">Quando essa contagem é útil?</a></li>
+      <li><a href="#texto-ferramenta">Use o contador gratuito</a></li>
+      <li><a href="#texto-faq">Perguntas frequentes</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="texto-palavras">1. O que é a contagem de palavras?</h2>
+  <p>A contagem de palavras mostra quantas palavras existem em um texto. Em geral, cada conjunto de letras ou números separado por espaços é considerado uma palavra. Por exemplo, a frase <strong>“Hoje eu estudei matemática”</strong> tem quatro palavras.</p>
+  <p>Essa medida aparece bastante em atividades escolares, redações, trabalhos, resumos e artigos. Se uma atividade pede pelo menos 300 palavras, por exemplo, você pode conferir se o texto chegou a essa quantidade antes de entregar.</p>
+
+  <h2 id="texto-caracteres">2. O que são caracteres?</h2>
+  <p>Caracteres são os elementos que formam o texto: letras, números, sinais de pontuação, símbolos e espaços. A frase “Oi, tudo bem?” possui letras, vírgula, espaço e ponto de interrogação — todos entram na contagem de caracteres.</p>
+  <p>É comum encontrar limites de caracteres em formulários, títulos, descrições e publicações em plataformas digitais. Por isso, vale conferir se o limite inclui os espaços, pois cada serviço pode apresentar sua própria regra.</p>
+
+  <h2 id="texto-exemplo">3. Exemplo prático</h2>
+  <p>Considere a frase <strong>“O TudoFácil ajuda você.”</strong>:</p>
+  <ul>
+    <li><strong>Palavras:</strong> 4.</li>
+    <li><strong>Caracteres com espaços:</strong> 23.</li>
+    <li><strong>Caracteres sem espaços:</strong> 20.</li>
+  </ul>
+  <p>A diferença acontece porque os espaços também são caracteres. A pontuação, como o ponto final, também entra na contagem.</p>
+
+  <h2 id="texto-espacos">4. Contar com ou sem espaços?</h2>
+  <p><strong>Com espaços:</strong> considera letras, números, pontuação, símbolos, espaços e quebras de linha.</p>
+  <p><strong>Sem espaços:</strong> desconsidera os espaços em branco, incluindo espaços entre palavras e quebras de linha. Letras e pontuação continuam contando.</p>
+  <div class="notice">Atenção: alguns contadores podem tratar emojis e símbolos compostos de maneiras diferentes. Se uma plataforma tiver um contador próprio, use-o como referência para o limite final.</div>
+
+  <h2 id="texto-usos">5. Quando essa contagem é útil?</h2>
+  <ul>
+    <li><strong>Na escola:</strong> conferir o tamanho de redações, resumos e trabalhos.</li>
+    <li><strong>Em formulários:</strong> respeitar limites de texto em campos de resposta.</li>
+    <li><strong>Em publicações:</strong> revisar títulos, legendas e descrições com limite de caracteres.</li>
+    <li><strong>Na revisão:</strong> acompanhar se o texto está muito curto ou longo para o objetivo.</li>
+  </ul>
+
+  <h2 id="texto-ferramenta">6. Use o contador gratuito do TudoFácil</h2>
+  <p>Você não precisa contar manualmente. Cole ou digite seu texto na ferramenta abaixo para ver a quantidade de palavras, caracteres com espaços e caracteres sem espaços. A contagem acontece no próprio navegador.</p>
+  <div class="article-cta">
+    <h3>Conte seu texto agora</h3>
+    <p>Experimente o contador gratuito e confira os números enquanto escreve.</p>
+    <button class="btn" type="button" data-open-tool="texto">Abrir contador de texto</button>
+  </div>
+
+  <h2>7. Conclusão</h2>
+  <p>Palavras e caracteres são medidas diferentes. Palavras ajudam a entender o tamanho do conteúdo, enquanto caracteres são importantes quando existe um limite de espaço. Com a ferramenta do TudoFácil, você pode conferir essas informações em poucos segundos.</p>
+  <p><strong>TudoFácil — ferramentas úteis para facilitar seu dia a dia.</strong></p>
+
+  <section class="faq" id="texto-faq">
+    <h2>Perguntas frequentes sobre contagem de texto</h2>
+    <details><summary>Espaço conta como caractere?</summary><p>Sim. Na contagem com espaços, cada espaço entre palavras também é considerado um caractere.</p></details>
+    <details><summary>Qual é a diferença entre palavras e caracteres?</summary><p>Palavras são unidades do texto separadas, geralmente, por espaços. Caracteres incluem letras, números, pontuação, símbolos e espaços.</p></details>
+    <details><summary>Quebras de linha entram na contagem?</summary><p>Elas podem ser consideradas caracteres, dependendo de como o contador funciona. O contador do TudoFácil considera as quebras de linha na contagem com espaços.</p></details>
+    <details><summary>O contador envia meu texto para algum lugar?</summary><p>Não. Nesta versão, a contagem é feita diretamente no navegador. O texto digitado não é enviado ao servidor do TudoFácil.</p></details>
+    <details><summary>O contador funciona para textos grandes?</summary><p>Sim, mas textos muito extensos podem depender da capacidade do navegador e do dispositivo utilizado.</p></details>
+  </section>
+</section>
+
 </main>
 <footer><div class="foot"><div><a class="brand" href="#inicio" data-page="inicio" style="color:white">Tudo<b>Fácil</b></a><p class="small">Ferramentas úteis, gratuitas e simples.</p></div><div><a href="#sobre" data-page="sobre">Sobre</a><a href="#privacidade" data-page="privacidade">Privacidade</a><a href="#contato" data-page="contato">Contato</a></div><div class="small">© <span id="year"></span> TudoFácil</div></div></footer>
 
@@ -384,7 +459,7 @@ main{max-width:1160px;padding-top:34px}
  }
  function route() {
    const page = location.hash.replace('#','');
-   if(['sobre','privacidade','contato','artigo-porcentagem','artigo-descontos','artigo-media'].includes(page)) showPage(page);
+   if(['sobre','privacidade','contato','artigo-porcentagem','artigo-descontos','artigo-media','artigo-texto'].includes(page)) showPage(page);
    else showPage('inicio');
  }
  window.addEventListener('hashchange', route);
@@ -497,10 +572,7 @@ main{max-width:1160px;padding-top:34px}
    result+='\n\nConfira se a fórmula selecionada corresponde à regra oficial da sua escola.';
    showResult('meanResult',result);
  });
- $('textToCount').addEventListener('input',()=>{
-   const t=$('textToCount').value;const words=t.trim()?t.trim().split(/\s+/u).length:0;
-   $('textResult').textContent=`${words} palavra(s) • ${t.length} caractere(s)`;
- });
+ $('textToCount').addEventListener('input',()=>{   const t=$('textToCount').value;   const words=t.trim()?t.trim().split(/\s+/u).length:0;   const chars=Array.from(t).length;   const withoutSpaces=Array.from(t.replace(/\s/gu,'')).length;   $('textResult').textContent=`${words} palavra(s) • ${chars} caractere(s) com espaços • ${withoutSpaces} sem espaços`; });
  let currentPassword='';
  $('makePassword').addEventListener('click',()=>{
    const len=Number($('length').value);if(!Number.isInteger(len)||len<8||len>32){showResult('passwordResult','Escolha um tamanho entre 8 e 32.',true);return;}
